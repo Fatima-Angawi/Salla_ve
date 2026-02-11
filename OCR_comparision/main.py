@@ -1,21 +1,15 @@
 import os
-# هذه الأسطر يجب أن تكون في القمة تماماً
 os.environ['FLAGS_use_onednn'] = '0'
 os.environ['PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK'] = 'True'
 
 import sys
-# أحياناً نحتاج إضافة المسار لضمان عدم وجود تداخل في الـ Modules
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from providers import OCRProvider, extract_text_from_img
-# ... بقية الكود
 from metrics import calculate_error_rates
 
-"""
-عندي 3 صور لوثائق رسميه ابغا اجرب 3 محركات OCR عليهم (PaddleOCR, EasyOCR, Tesseract) وبعدين اقارن النتائج مع النصوص الحقيقية (ground truth) باستخدام مقاييس WER و CER.
 
-
-"""
 image_dir = "dataset/images"
 ground_truth_dir = "dataset/ground_truth"
 
