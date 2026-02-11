@@ -1,9 +1,3 @@
-'''
-paddleocr --- IGNORE ---
-easyocr --- IGNORE ---
-tesseract --- IGNORE ---
-aws --- IGNORE ---
-'''
 from paddleocr import PaddleOCR
 from easyocr import Reader
 import pytesseract
@@ -33,7 +27,7 @@ if _tess_path:
 class OCRProvider:
     def __init__(self):
 
-        # EasyOCR يدعم العربية والإنجليزية
+        # EasyOCR 
         self.easy_ocr = Reader(['ar', 'en'])
         # Tesseract
         self.tesseract_ocr = pytesseract
