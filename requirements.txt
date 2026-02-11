@@ -1,0 +1,19 @@
+# PyTorch stack (EasyOCR يعتمد عليهم)
+torch==2.10.0
+torchvision==0.25.0
+torchaudio==2.10.0
+
+# PaddleOCR و PaddlePaddle
+paddlepaddle==3.3.0
+paddleocr==3.4.0
+
+# OCR المحركات الأخرى
+easyocr==1.7.2
+pytesseract==0.3.13
+
+# معالجة الصور
+opencv-python==4.13.0
+pillow==12.1.1
+
+# Metrics
+jiwer==4.0.0
